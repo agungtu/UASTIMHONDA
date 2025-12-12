@@ -4,7 +4,8 @@ body {
 }
 
 .bg-nav {
-  background-color: #f6f8fd;
+  background: linear-gradient(to right, #961313, #d62727);
+  box-shadow: #000000 0px 3px 20px;
 }
 
 .mt--2 {
@@ -17,15 +18,107 @@ body {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #212529 !important;
+  color: #ffffff !important;
   font-size: 16px;
   font-weight: 600;
+  font-family: 'Poppins', sans-serif;
   transition: all 0.4s;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #0d6efd !important;
+  color: #000000 !important;
 }
+
+
+/* Dropdown */
+.dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.dropdown-item {
+  color: #31316a;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #000000;
+}
+
+/* Main Content */
+.hero-section img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* 2 Konten */
+.promo-card {
+    background: linear-gradient(to right, #e40000, #b63030);
+    color: white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.promo-card h5 {
+    font-size: 1.1rem;
+}
+
+.promo-card p {
+    color: #fff; /* sebelumnya #555 (tidak kontras) */
+    line-height: 1.6;
+}
+
+.bg-owner {
+  background: #fff;
+}
+
+.bg-owner:hover{
+  background-color: #961313;
+  color: #000000;
+}
+
+/* Running Text */
+.running-bar {
+    background: linear-gradient(to right, #961313, #d62727);
+    color: #ffffff;
+    padding: 12px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+.running-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: berjalan 25s linear infinite;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+@keyframes berjalan {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* About Me */
+.text-justify {
+  text-align: justify;
+}
+
 
 .feature-icon-1 {
   display: inline-flex;
@@ -56,6 +149,105 @@ body {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
+}
+
+/* PELAYANAN */
+/* Background Honda */
+.services-section {
+  background: linear-gradient(135deg, #b60000, #ff1f1f);
+  padding-bottom: 80px;
+  padding-top: 90px;
+}
+/* Logo di samping judul */
+.honda-logo {
+  height: 48px;
+  width: auto;
+  filter: drop-shadow(0 3px 4px rgba(0,0,0,0.4));
+  animation: fadeLogo 0.9s ease forwards;
+}
+
+/* Logo fade animation */
+@keyframes fadeLogo {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+/* Title */
+.section-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.4);
+}
+
+/* Service card */
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+}
+
+/* Image wrapper (rounded + glowing) */
+.img-wrapper {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 3px solid rgba(255,255,255,0.35);
+  transition: 0.4s;
+}
+
+.service-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+/* Hover - 3D Lift + Zoom */
+.service-card:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+  border-color: #ffffff;
+}
+
+.service-card:hover .service-img {
+  transform: scale(1.12);
+}
+
+/* Title styling */
+.service-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* Fade-in animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.fade-up:nth-child(1) { animation-delay: 0.2s; }
+.fade-up:nth-child(2) { animation-delay: 0.4s; }
+.fade-up:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 /* Ownership Section */
@@ -170,9 +362,15 @@ body {
   margin-right: 0.5rem;
 }
 
+
+
 /* Footer */
+.footer {
+  background-color: #bb2c2c;
+}
+
 .footer .copyright a {
-  color: #ee5050;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -181,10 +379,10 @@ body {
 }
 
 .footer .link a {
-  color: #212529;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .footer .link a:hover {
-  color: #0d6efd;
+  color: #000000;
 }
